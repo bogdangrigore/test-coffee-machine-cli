@@ -10,7 +10,7 @@ To use this CLI application you will need:
 1. Clone the repo
 2. Run composer install.
 3. Run php bin/console doctrine:migrations:migrate
-4. Add to your .env file the MACHINE_PASSWORD variable. More on that later
+4. Add your .env on the model of the provided dist file
 
 ## Commands
 

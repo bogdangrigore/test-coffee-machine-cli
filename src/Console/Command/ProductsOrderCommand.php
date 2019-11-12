@@ -156,6 +156,7 @@ class ProductsOrderCommand extends Command
                 $this->validateCashOperation($paymentAmountRon, $paymentAmountBan, $product->getPrice(), $productQuantity);
             } catch (\Exception $e) {
                 $this->balanceService->giveOutChange($paymentAmountRon, $paymentAmountBan, 0, 0);
+                $this->entityManagerService->commitEntities();
                 $this->giveChange($output);
                 throw $e;
             }
